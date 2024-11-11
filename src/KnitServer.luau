@@ -136,7 +136,7 @@ KnitServer.Util = (script.Parent :: Instance).Parent
 -- All the neccessary packages
 KnitServer.Packages = ReplicatedStorage.Packages
 KnitServer.ServerPackages = ServerScriptService.ServerPackages
-KnitServer.Shared = require(ReplicatedStorage.Shared)
+KnitServer.Shared = ReplicatedStorage.Shared;
 KnitServer.Utility = KnitServer.Shared.Utility
 KnitServer.Functions = require(ReplicatedStorage.Functions)
 KnitServer.Components = ServerScriptService.Components

@@ -128,7 +128,7 @@ KnitClient.Util = (script.Parent :: Instance).Parent
 
 -- All the neccessary packages
 KnitClient.Packages = ReplicatedStorage.Packages
-KnitClient.Shared = require(ReplicatedStorage.Shared)
+KnitClient.Shared = ReplicatedStorage.Shared
 KnitClient.Utility = KnitClient.Shared.Utility
 KnitClient.Functions = require(ReplicatedStorage.Functions)
 KnitClient.Replica = require(KnitClient.Packages.Replica)
