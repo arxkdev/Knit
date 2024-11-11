@@ -2,6 +2,8 @@
 --!optimize 2
 
 local RunService = game:GetService("RunService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local ServerScriptService = game:GetService("ServerScriptService")
 
 local IS_STUDIO = RunService:IsStudio()
 
@@ -130,6 +132,14 @@ local KnitServer = {}
 	folder only contains what is necessary for Knit to run in Wally mode.
 ]=]
 KnitServer.Util = (script.Parent :: Instance).Parent
+
+-- All the neccessary packages
+KnitServer.Packages = ReplicatedStorage.Packages
+KnitServer.ServerPackages = ServerScriptService.ServerPackages
+KnitServer.Shared = require(ReplicatedStorage.Shared)
+KnitServer.Utility = KnitServer.Shared.Utility
+KnitServer.Functions = require(ReplicatedStorage.Functions)
+KnitServer.Components = ServerScriptService.Components
 
 local SIGNAL_MARKER = newproxy(true)
 getmetatable(SIGNAL_MARKER).__tostring = function()

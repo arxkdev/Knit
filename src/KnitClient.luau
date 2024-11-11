@@ -3,6 +3,8 @@
 
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local StarterPlayer = game:GetService("StarterPlayer")
 local IS_STUDIO = RunService:IsStudio()
 
 --[=[
@@ -123,6 +125,14 @@ KnitClient.Player = Players.LocalPlayer
 	folder only contains what is necessary for Knit to run in Wally mode.
 ]=]
 KnitClient.Util = (script.Parent :: Instance).Parent
+
+-- All the neccessary packages
+KnitClient.Packages = ReplicatedStorage.Packages
+KnitClient.Shared = require(ReplicatedStorage.Shared)
+KnitClient.Utility = KnitClient.Shared.Utility
+KnitClient.Functions = require(ReplicatedStorage.Functions)
+KnitClient.Replica = require(KnitClient.Packages.Replica)
+KnitClient.Components = StarterPlayer.StarterPlayerScripts.Components
 
 local Comm = require(KnitClient.Util.Comm)
 local Promise = require(KnitClient.Util.Promise)
