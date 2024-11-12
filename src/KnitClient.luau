@@ -132,7 +132,7 @@ KnitClient.Shared = ReplicatedStorage.Shared
 KnitClient.Utility = KnitClient.Shared.Utility
 KnitClient.Functions = require(ReplicatedStorage.Functions)
 KnitClient.Replica = require(KnitClient.Packages.Replica)
-KnitClient.Components = StarterPlayer.StarterPlayerScripts.Components
+KnitClient.Components = KnitClient.Player.PlayerScripts.Components
 
 local Comm = require(KnitClient.Util.Comm)
 local Promise = require(KnitClient.Util.Promise)
